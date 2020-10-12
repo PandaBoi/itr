@@ -68,6 +68,6 @@ hc23 = replace(hc21, num_attention_heads=12, hidden_size=384, lr=5e-4) #learns o
 hc24 = replace(hc23, intermediate_size=3072, lr=1e-4)
 
 preEnc = replace(hc24, epochs=5, exp_name='pretrained-enc')
-preEncDec = replace(hc24, epochs=2, exp_name='pretrained-enc-dec')
+preEncDec = replace(hc24, epochs=10, exp_name='pretrained-enc-dec')
 
 

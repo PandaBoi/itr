@@ -124,7 +124,7 @@ def main():
 
     ckpt_callback = ModelCheckpoint(
                     monitor = 'Acc_Test',
-                    filepath = str(rconf.output_dir) + '/model_weights' ,
+                    filepath = str(rconf.output_dir) + '/' ,
                     mode = 'max',
                     save_top_k = 1,
                     save_last = True
