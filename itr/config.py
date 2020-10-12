@@ -42,11 +42,11 @@ class Config:
         self.log_dir = Path(self.base_log_dir) / self.exp_name
         self.log_dir.mkdir(parents=False, exist_ok=True)
 
-        output_dir = Path(self.base_output_dir) / self.exp_name
+        self.output_dir = Path(self.base_output_dir) / self.exp_name
         self.model_output_dirs = ED({})
 
         for m in ['encoder', 'decoder']:
-            out = output_dir / m
+            out = self.output_dir / m
             out.mkdir(parents=True, exist_ok=True)
             self.model_output_dirs[m] = out
 
